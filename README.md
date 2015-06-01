@@ -1,2 +1,2 @@
 # phpfastcgi.github.io
-Official website for the PHP Fast CGI organization.
+Official website for the PHP FastCGI organization.
