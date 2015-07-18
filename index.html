@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+
+    <p>
+      <a class="btn btn-primary btn-lg" href="{{ "/quick-start/" | prepend: site.baseurl }}" role="button">
+        <span class="glyphicon glyphicon-flash"></span>
+        &nbsp;
+        Quick start guide
+      </a>
+      <a class="btn btn-primary btn-lg" href="{{ "/documentation/" | prepend: site.baseurl }}" role="button">
+        <span class="glyphicon glyphicon-book"></span>
+        &nbsp;
+        Read the documentation
+      </a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>News and Blog</h2>
+
+  <p>
+    Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a> or bookmark this page
+    to keep up to date with our latest news updates.
+  </p>
+
+  <ul class="list-group">
+    {% for post in site.posts %}
+      <li class="list-group-item">
+        <span class="label label-info pull-right">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

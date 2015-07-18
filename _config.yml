@@ -1,0 +1,14 @@
+# Site settings
+title: PHPFastCGI
+description: >
+  PHPFastCGI is a collection of libraries that can be used to build
+  FastCGI applications in PHP. Unlike normal PHP applications, these
+  applications can stay alive between request cycles - improving
+  speed and lowering resource use.
+baseurl: ""
+url: "http://phpfastcgi.github.io/"
+twitter_username: AndrewCarterUK
+github_username:  PHPFastCGI
+
+# Build settings
+markdown: kramdown
