@@ -14,7 +14,7 @@ PHPFastCGI is a collection of several packages including a core FastCGIDaemon pa
 
 Below is an example of a simple 'Hello, World!' FastCGI application in PHP using the core FastCGIDaemon package:
 
-```php
+{% highlight php startinline=true %}
 <?php // command.php
 
 // Include the composer autoloader
@@ -34,25 +34,25 @@ $application = (new ApplicationFactory)->createApplication($kernel);
 
 // Run the Symfony console application
 $application->run();
-```
+{% endhighlight %}
 
 If you wish to configure your FastCGI application to work with the apache web server, you can use the apache FastCGI module to process manage your application.
 
 This can be done by creating a FCGI script that launches your application and inserting a FastCgiServer directive into your virtual host configuration.
 
-```sh
+{% highlight bash %}
 #!/bin/bash
 php /path/to/command.php run
-```
+{% endhighlight %}
 
-```
+{% highlight bash %}
 FastCgiServer /path/to/web/root/script.fcgi
-```
+{% endhighlight %}
 
 By default, the daemon will listen on FCGI_LISTENSOCK_FILENO, but it can also be configured to listen on a TCP address. For example:
 
-```sh
+{% highlight bash %}
 php /path/to/command.php run --port=5000 --host=localhost
-```
+{% endhighlight %}
 
 If you are using a web server such as nginx, you will need to use a process manager to monitor and run your application.
