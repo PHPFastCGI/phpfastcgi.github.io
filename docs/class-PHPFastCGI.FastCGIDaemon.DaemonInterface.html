@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Interface PHPFastCGI\FastCGIDaemon\DaemonInterface</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.html">
+						PHPFastCGI<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.html">
+						FastCGIDaemon<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Command.html">
+						Command					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Connection.html">
+						Connection					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">
+						ConnectionHandler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html">
+						Http					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ApplicationFactory.html">ApplicationFactory</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.CallbackWrapper.html">CallbackWrapper</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.Daemon.html">Daemon</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.DaemonFactory.html">DaemonFactory</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ApplicationFactoryInterface.html">ApplicationFactoryInterface</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.DaemonFactoryInterface.html">DaemonFactoryInterface</a></li>
+				<li class="active"><a href="class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html">DaemonInterface</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.KernelInterface.html">KernelInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHPFastCGI.FastCGIDaemon.html" title="Summary of PHPFastCGI\FastCGIDaemon"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface DaemonInterface</h1>
+
+
+	<div class="description">
+	<p>The DaemonInterface contains the FCGI constants and defines a single blocking
+method to run the daemon.</p>
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-PHPFastCGI.FastCGIDaemon.Daemon.html">PHPFastCGI\FastCGIDaemon\Daemon</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PHPFastCGI.html">PHPFastCGI</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.html">FastCGIDaemon</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#5-50" title="Go to source code">DaemonInterface.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#42-49" title="Go to source code">run</a>( )</code>
+
+		<div class="description short">
+			<p>Run the daemon.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Run the daemon.</p>
+
+<p>This is a blocking method that does not return.</p>
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception<br>On fatal error
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="FCGI_LISTENSOCK_FILENO" id="FCGI_LISTENSOCK_FILENO">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#12" title="Go to source code"><b>FCGI_LISTENSOCK_FILENO</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_LISTENSOCK_FILENO" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_VERSION_1" id="FCGI_VERSION_1">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#15" title="Go to source code"><b>FCGI_VERSION_1</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_VERSION_1" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_BEGIN_REQUEST" id="FCGI_BEGIN_REQUEST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#18" title="Go to source code"><b>FCGI_BEGIN_REQUEST</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_BEGIN_REQUEST" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_ABORT_REQUEST" id="FCGI_ABORT_REQUEST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#19" title="Go to source code"><b>FCGI_ABORT_REQUEST</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_ABORT_REQUEST" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_END_REQUEST" id="FCGI_END_REQUEST">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#20" title="Go to source code"><b>FCGI_END_REQUEST</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_END_REQUEST" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_PARAMS" id="FCGI_PARAMS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#21" title="Go to source code"><b>FCGI_PARAMS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_PARAMS" class="anchor">#</a>
+				<code><span class="php-num">4</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_STDIN" id="FCGI_STDIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#22" title="Go to source code"><b>FCGI_STDIN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_STDIN" class="anchor">#</a>
+				<code><span class="php-num">5</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_STDOUT" id="FCGI_STDOUT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#23" title="Go to source code"><b>FCGI_STDOUT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_STDOUT" class="anchor">#</a>
+				<code><span class="php-num">6</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_STDERR" id="FCGI_STDERR">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#24" title="Go to source code"><b>FCGI_STDERR</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_STDERR" class="anchor">#</a>
+				<code><span class="php-num">7</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_DATA" id="FCGI_DATA">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#25" title="Go to source code"><b>FCGI_DATA</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_DATA" class="anchor">#</a>
+				<code><span class="php-num">8</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_GET_VALUES" id="FCGI_GET_VALUES">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#26" title="Go to source code"><b>FCGI_GET_VALUES</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_GET_VALUES" class="anchor">#</a>
+				<code><span class="php-num">9</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_RESPONDER" id="FCGI_RESPONDER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#29" title="Go to source code"><b>FCGI_RESPONDER</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_RESPONDER" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_AUTHORIZER" id="FCGI_AUTHORIZER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#30" title="Go to source code"><b>FCGI_AUTHORIZER</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_AUTHORIZER" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_FILTER" id="FCGI_FILTER">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#31" title="Go to source code"><b>FCGI_FILTER</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_FILTER" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_KEEP_CONNECTION" id="FCGI_KEEP_CONNECTION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#34" title="Go to source code"><b>FCGI_KEEP_CONNECTION</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_KEEP_CONNECTION" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_REQUEST_COMPLETE" id="FCGI_REQUEST_COMPLETE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#37" title="Go to source code"><b>FCGI_REQUEST_COMPLETE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_REQUEST_COMPLETE" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_CANT_MPX_CONN" id="FCGI_CANT_MPX_CONN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#38" title="Go to source code"><b>FCGI_CANT_MPX_CONN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_CANT_MPX_CONN" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_OVERLOADED" id="FCGI_OVERLOADED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#39" title="Go to source code"><b>FCGI_OVERLOADED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_OVERLOADED" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="FCGI_UNKNOWN_ROLE" id="FCGI_UNKNOWN_ROLE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.DaemonInterface.html#40" title="Go to source code"><b>FCGI_UNKNOWN_ROLE</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#FCGI_UNKNOWN_ROLE" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

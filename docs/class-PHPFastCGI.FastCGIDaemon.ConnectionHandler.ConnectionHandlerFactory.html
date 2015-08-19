@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerFactory</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.html">
+						PHPFastCGI<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.html">
+						FastCGIDaemon<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Command.html">
+						Command					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Connection.html">
+						Connection					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">
+						ConnectionHandler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html">
+						Http					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html">ConnectionHandler</a></li>
+				<li class="active"><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html">ConnectionHandlerFactory</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactoryInterface.html">ConnectionHandlerFactoryInterface</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerInterface.html">ConnectionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html" title="Summary of PHPFastCGI\FastCGIDaemon\ConnectionHandler"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ConnectionHandlerFactory</h1>
+
+
+	<div class="description">
+	<p>The default implementation of the ConnectionHandlerFactoryInterface.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerFactory</span></b>			
+			 implements 
+				<a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactoryInterface.html"><span>PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerFactoryInterface</span></a>, 
+			
+<span>Psr\Log\LoggerAwareInterface</span>
+			
+			 uses 
+					Psr\Log\LoggerAwareTrait (not available)
+
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PHPFastCGI.html">PHPFastCGI</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.html">FastCGIDaemon</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">ConnectionHandler</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html#13-49" title="Go to source code">ConnectionHandler/ConnectionHandlerFactory.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html#25-40" title="Go to source code">__construct</a>( <span><code><a href="class-PHPFastCGI.FastCGIDaemon.KernelInterface.html">PHPFastCGI\FastCGIDaemon\KernelInterface</a></code>|callable <var>$kernel</var></span>, <span>Psr\Log\LoggerInterface <var>$logger</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$kernel</var></dt>
+					<dd>The kernel to create handlers for</dd>
+					<dt><var>$logger</var></dt>
+					<dd>A logger to use</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createConnectionHandler" id="_createConnectionHandler">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerInterface.html">PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerInterface</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createConnectionHandler">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html#42-48" title="Go to source code">createConnectionHandler</a>( <span><code><a href="class-PHPFastCGI.FastCGIDaemon.Connection.ConnectionInterface.html">PHPFastCGI\FastCGIDaemon\Connection\ConnectionInterface</a></code> <var>$connection</var></span> )</code>
+
+		<div class="description short">
+			<p>Create a connection handler.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create a connection handler.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$connection</var></dt>
+					<dd>The connection to handle</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerInterface.html">PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerInterface</a></code><br>The connection handler
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactoryInterface.html#_createConnectionHandler">PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandlerFactoryInterface::createConnectionHandler()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="kernel" id="$kernel">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-PHPFastCGI.FastCGIDaemon.KernelInterface.html">PHPFastCGI\FastCGIDaemon\KernelInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html#20-23" title="Go to source code"><var>$kernel</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$kernel" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

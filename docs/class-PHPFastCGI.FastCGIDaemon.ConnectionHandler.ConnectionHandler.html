@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandler</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.html">
+						PHPFastCGI<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.html">
+						FastCGIDaemon<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Command.html">
+						Command					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Connection.html">
+						Connection					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">
+						ConnectionHandler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html">
+						Http					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html">ConnectionHandler</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactory.html">ConnectionHandlerFactory</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerFactoryInterface.html">ConnectionHandlerFactoryInterface</a></li>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandlerInterface.html">ConnectionHandlerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html" title="Summary of PHPFastCGI\FastCGIDaemon\ConnectionHandler"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class ConnectionHandler</h1>
+
+
+	<div class="description">
+	<p>The default implementation of the ConnectionHandlerInterface.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>PHPFastCGI\FastCGIDaemon\ConnectionHandler\ConnectionHandler</span></b>			
+			 implements 
+<span>Psr\Log\LoggerAwareInterface</span>
+			
+			 uses 
+					Psr\Log\LoggerAwareTrait (not available)
+
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PHPFastCGI.html">PHPFastCGI</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.html">FastCGIDaemon</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">ConnectionHandler</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#18-441" title="Go to source code">ConnectionHandler/ConnectionHandler.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#57-74" title="Go to source code">__construct</a>( <span><code><a href="class-PHPFastCGI.FastCGIDaemon.KernelInterface.html">PHPFastCGI\FastCGIDaemon\KernelInterface</a></code> <var>$kernel</var></span>, <span><code><a href="class-PHPFastCGI.FastCGIDaemon.Connection.ConnectionInterface.html">PHPFastCGI\FastCGIDaemon\Connection\ConnectionInterface</a></code> <var>$connection</var></span>, <span>Psr\Log\LoggerInterface <var>$logger</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$kernel</var></dt>
+					<dd>The kernel to use to handle requests</dd>
+					<dt><var>$connection</var></dt>
+					<dd>The connection to handle</dd>
+					<dt><var>$logger</var></dt>
+					<dd>A logger to use</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ready" id="_ready">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ready">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#76-96" title="Go to source code">ready</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="shutdown" id="_shutdown">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_shutdown">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#98-104" title="Go to source code">shutdown</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#106-121" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="readRecord" id="_readRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_readRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#123-155" title="Go to source code">readRecord</a>( )</code>
+
+		<div class="description short">
+			<p>Read a record from the connection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Read a record from the connection.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|null<br>The record that has been read
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeRecord" id="_writeRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#157-175" title="Go to source code">writeRecord</a>( <span>integer <var>$requestId</var></span>, <span>integer <var>$type</var></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Write a record to the connection.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write a record to the connection.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id to write to</dd>
+					<dt><var>$type</var></dt>
+					<dd>The type of record</dd>
+					<dt><var>$content</var></dt>
+					<dd>The content of the record</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writeResponse" id="_writeResponse">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_writeResponse">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#177-206" title="Go to source code">writeResponse</a>( <span>integer <var>$requestId</var></span>, <span>string <var>$headerData</var></span>, <span>Psr\Http\Message\StreamInterface <var>$stream</var></span> )</code>
+
+		<div class="description short">
+			<p>Write a response to the connection as FCGI_STDOUT records.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write a response to the connection as FCGI_STDOUT records.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id to write to</dd>
+					<dt><var>$headerData</var></dt>
+					<dd>The header data to write (including terminating CRLFCRLF)</dd>
+					<dt><var>$stream</var></dt>
+					<dd>The stream to write</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="endRequest" id="_endRequest">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_endRequest">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#208-232" title="Go to source code">endRequest</a>( <span>integer <var>$requestId</var></span>, <span>integer <var>$appStatus</var> = <span class="php-num">0</span></span>, <span>integer <var>$protocolStatus</var> = PHPFastCGI\FastCGIDaemon\ConnectionHandler\DaemonInterface::FCGI_REQUEST_COMPLETE</span> )</code>
+
+		<div class="description short">
+			<p>End the request by writing an FCGI_END_REQUEST record and then removing
+the request from memory and closing the connection if necessary.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>End the request by writing an FCGI_END_REQUEST record and then removing
+the request from memory and closing the connection if necessary.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id to end</dd>
+					<dt><var>$appStatus</var></dt>
+					<dd>The application status to declare</dd>
+					<dt><var>$protocolStatus</var></dt>
+					<dd>The protocol status to declare</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processRecord" id="_processRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#234-267" title="Go to source code">processRecord</a>( <span>array <var>$record</var></span> )</code>
+
+		<div class="description short">
+			<p>Process a record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process a record.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$record</var></dt>
+					<dd>The record that has been read</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.ProtocolException.html">PHPFastCGI\FastCGIDaemon\Exception\ProtocolException</a></code><br>If the client sends an unexpected record.
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processBeginRequestRecord" id="_processBeginRequestRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processBeginRequestRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#269-302" title="Go to source code">processBeginRequestRecord</a>( <span>integer <var>$requestId</var></span>, <span>string <var>$contentData</var></span> )</code>
+
+		<div class="description short">
+			<p>Process a FCGI_BEGIN_REQUEST record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process a FCGI_BEGIN_REQUEST record.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id sending the record</dd>
+					<dt><var>$contentData</var></dt>
+					<dd>The content of the record</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.ProtocolException.html">PHPFastCGI\FastCGIDaemon\Exception\ProtocolException</a></code><br>If the FCGI_BEGIN_REQUEST record is unexpected
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processParamsRecord" id="_processParamsRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processParamsRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#304-353" title="Go to source code">processParamsRecord</a>( <span>integer <var>$requestId</var></span>, <span>string <var>$contentData</var></span> )</code>
+
+		<div class="description short">
+			<p>Process a FCGI_PARAMS record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process a FCGI_PARAMS record.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id sending the record</dd>
+					<dt><var>$contentData</var></dt>
+					<dd>The content of the record</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.ProtocolException.html">PHPFastCGI\FastCGIDaemon\Exception\ProtocolException</a></code><br>If the FCGI_PARAMS record is unexpected
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processStdinRecord" id="_processStdinRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processStdinRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#355-376" title="Go to source code">processStdinRecord</a>( <span>integer <var>$requestId</var></span>, <span>string <var>$contentData</var></span> )</code>
+
+		<div class="description short">
+			<p>Process a FCGI_STDIN record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process a FCGI_STDIN record.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id sending the record</dd>
+					<dt><var>$contentData</var></dt>
+					<dd>The content of the record</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.ProtocolException.html">PHPFastCGI\FastCGIDaemon\Exception\ProtocolException</a></code><br>If the FCGI_STDIN record is unexpected
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="processAbortRequestRecord" id="_processAbortRequestRecord">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_processAbortRequestRecord">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#378-392" title="Go to source code">processAbortRequestRecord</a>( <span>integer <var>$requestId</var></span> )</code>
+
+		<div class="description short">
+			<p>Process a FCGI_ABORT_REQUEST record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process a FCGI_ABORT_REQUEST record.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id sending the record</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.ProtocolException.html">PHPFastCGI\FastCGIDaemon\Exception\ProtocolException</a></code><br>If the FCGI_ABORT_REQUEST record is unexpected
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dispatchRequest" id="_dispatchRequest">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dispatchRequest">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#394-418" title="Go to source code">dispatchRequest</a>( <span>integer <var>$requestId</var></span> )</code>
+
+		<div class="description short">
+			<p>Dispatches a request to the kernel.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Dispatches a request to the kernel.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id that is ready to dispatch</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-PHPFastCGI.FastCGIDaemon.Exception.DaemonException.html">PHPFastCGI\FastCGIDaemon\Exception\DaemonException</a></code><br>If there is an error dispatching the request
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendResponse" id="_sendResponse">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendResponse">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#420-440" title="Go to source code">sendResponse</a>( <span>integer <var>$requestId</var></span>, <span>Psr\Http\Message\ResponseInterface <var>$response</var></span> )</code>
+
+		<div class="description short">
+			<p>Sends the response to the client.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends the response to the client.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$requestId</var></dt>
+					<dd>The request id to respond to</dd>
+					<dt><var>$response</var></dt>
+					<dd>The PSR-7 HTTP response message</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="READ_LENGTH" id="READ_LENGTH">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#25" title="Go to source code"><b>READ_LENGTH</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#READ_LENGTH" class="anchor">#</a>
+				<code><span class="php-num">4096</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="shutdown" id="$shutdown">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#27-30" title="Go to source code"><var>$shutdown</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$shutdown" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="kernel" id="$kernel">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-PHPFastCGI.FastCGIDaemon.KernelInterface.html">PHPFastCGI\FastCGIDaemon\KernelInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#32-35" title="Go to source code"><var>$kernel</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$kernel" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="connection" id="$connection">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-PHPFastCGI.FastCGIDaemon.Connection.ConnectionInterface.html">PHPFastCGI\FastCGIDaemon\Connection\ConnectionInterface</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#37-40" title="Go to source code"><var>$connection</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$connection" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="requests" id="$requests">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#42-45" title="Go to source code"><var>$requests</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$requests" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="buffer" id="$buffer">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#47-50" title="Go to source code"><var>$buffer</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$buffer" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="bufferLength" id="$bufferLength">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.ConnectionHandler.ConnectionHandler.html#52-55" title="Go to source code"><var>$bufferLength</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$bufferLength" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
