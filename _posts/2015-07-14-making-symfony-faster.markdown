@@ -43,5 +43,5 @@ php app/console speedfony:run --env="prod"
 You can also configure the FastCGI application to listen on a TCP address using the 'port' and 'host' options:
 
 {% highlight bash %}
-php app/console daemon:run --env="prod" --port 5000
+php app/console speedfony:run --env="prod" --port 5000
 {% endhighlight %}
