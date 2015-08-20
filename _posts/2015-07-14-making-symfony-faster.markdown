@@ -10,7 +10,7 @@ By turning your Symfony application into a FastCGI application, you can keep the
 To do this, open the terminal in your project directory and run the following command:
 
 {% highlight bash %}
-php composer.phar require "phpfastcgi/speedfony-bundle:~0.4"
+php composer.phar require "phpfastcgi/speedfony-bundle:~0.5"
 {% endhighlight %}
 
 This command adds the Speedfony Bundle to your composer dependencies.
@@ -37,7 +37,7 @@ class AppKernel extends Kernel
 Your application can now be run as a FastCGI application listening on FCGI_LISTENSOCK_FILENO (stdin) using this command:
 
 {% highlight bash %}
-php app/console daemon:run --env="prod"
+php app/console speedfony:run --env="prod"
 {% endhighlight %}
 
 You can also configure the FastCGI application to listen on a TCP address using the 'port' and 'host' options:
