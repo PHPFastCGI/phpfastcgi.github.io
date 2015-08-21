@@ -23,12 +23,6 @@ The best practice is to make sure that all errors and exceptions are appropriate
 
 Apache's [mod_fastcgi][mod_fastcgi] includes a process manager that is very easy to configure. If you are using a web server such as NGINX, you may need to use a process manager such as [supervisord][supervisord].
 
-## Memory Segregation
-
-Static memory and global variables are well documented enemies. If you intend to create a FastCGI application, you should avoid these like the plague.
-
-Any scenario where a HTTP request could influence, interfere or read memory that is shared by a later (or earlier) HTTP request is an opportunity for an attacker.
-
 ## Code Updates and Deployment
 
 Usually when we make changes to our application, these are recognised immediately as PHP rereads our file every time it executes it. In some scenarios, we may have to flush caches but that is about as tricky as it usually gets. When working with long running processes, we have to make sure that we shutdown and reload our application when we update its code.
@@ -41,6 +35,12 @@ When running multiple instances of your FastCGI application, you should desire a
 
 If you are using apache's [mod_fastcgi][mod_fastcgi] to process manage your application, a graceful reload of the web server may be your best option.
 
+## Memory Segregation
+
+Static memory and global variables are well documented enemies. If you intend to create a FastCGI application, you should avoid these like the plague.
+
+Any scenario where a HTTP request could influence, interfere or read memory that is shared by a later (or earlier) HTTP request is an opportunity for an attacker.
+
 ## Memory Leaks
 
 Although this is changing, PHP applications and frameworks are not usually designed to run for long periods of time. Anyone who has ever worked with a low level language (such as C or C++) will understand that the traditional PHP developer approach to memory allocation is incredibly lacking in any form of principal or organization.
@@ -49,7 +49,7 @@ This is an approach that we cannot afford to take when developing long running a
 
 For example, Doctrine's SQL logger (enabled by default in the Symfony development environment) can very quickly cause a resource issue. If you are using the Doctrine Entity Manager, you must also take care to use the EntityManager::clear() method provided and remove references to entities that you no longer require it to manage.
 
-One potential approach for handling memory leaks is to restart application instances after they have been operating for a certain amount of time or handled a certain number of requests. This feature is scheduled for integration into the FastCGIDaemon core package and will be available before the first stable release.
+One potential approach for handling memory leaks is to restart application instances after they have been operating for a certain amount of time or handled a certain number of requests. This feature is scheduled for integration into the FastCGIDaemon core package and will be available before the first stable release. However, it is still considered best practice to develop your applications without properly without memory leaks.
 
 ## Conclusion
 
