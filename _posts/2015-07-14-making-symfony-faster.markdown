@@ -7,7 +7,7 @@ categories: general
 
 By turning your Symfony application into a FastCGI application, you can keep the application in memory between request cycles.
 
-Before doing this, please read [the post on whether you should use PHPFastCGI with your application]({% post_url 2015-08-21-should-I-use-phpfastcgi %}).
+Before doing this, please read the post on [things to consider when using PHPFastCGI with your application]({% post_url 2015-08-21-things-to-consider-using-phpfastcgi %}).
 
 To do this, open the terminal in your project directory and run the following command:
 
