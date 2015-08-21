@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Should I use PHPFastCGI with my application?"
+title:  "Things to consider when developing an application with PHPFastCGI"
 date:   2015-08-21 09:00:00
 categories: general
 ---
