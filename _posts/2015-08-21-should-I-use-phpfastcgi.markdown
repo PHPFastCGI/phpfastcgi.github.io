@@ -39,7 +39,7 @@ I am currently working on features to ensure that shutdown signals cause PHPFast
 
 When running multiple instances of your FastCGI application, you should desire a configuration that allows you to shutdown and restart instances individually to prevent down time. Running multiple instances of your application is also recommended for performance reasons.
 
-If you are using apache's [mod_fastcgi][mod_fastcgi] to process manage your application, a graceful reload of the webserver may be your best option.
+If you are using apache's [mod_fastcgi][mod_fastcgi] to process manage your application, a graceful reload of the web server may be your best option.
 
 ## Memory Leaks
 
