@@ -10,6 +10,10 @@ Using PHPFastCGI, applications can stay alive between HTTP requests whilst opera
 
 PHPFastCGI is a collection of several packages including a core FastCGIDaemon package and packages built for easy integration with the Symfony, Silex and Slim frameworks.
 
+## Warning
+
+Before doing this, please read [the post on whether you should use PHPFastCGI with your application]({% post_url 2015-08-21-should-I-use-phpfastcgi %}).
+
 ## Usage
 
 Below is an example of a simple 'Hello, World!' FastCGI application in PHP using the core FastCGIDaemon package:
