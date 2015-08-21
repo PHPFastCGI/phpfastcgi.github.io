@@ -49,7 +49,7 @@ This is an approach that we cannot afford to take when developing long running a
 
 For example, Doctrine's SQL logger (enabled by default in the Symfony development environment) can very quickly cause a resource issue. If you are using the Doctrine Entity Manager, you must also take care to use the EntityManager::clear() method provided and remove references to entities that you no longer require it to manage.
 
-One potential approach for handling memory leaks is to restart application instances after they have been operating for a certain amount of time or handled a certain number of requests. This feature is scheduled for integration into the FastCGIDaemon core package and will be available before the first stable release. However, it is still considered best practice to develop your applications without properly without memory leaks.
+One potential approach for handling memory leaks is to restart application instances after they have been operating for a certain amount of time or handled a certain number of requests. This feature is scheduled for integration into the FastCGIDaemon core package and will be available before the first stable release. However, it is still considered best practice to try and develop applications without memory leaks.
 
 ## Conclusion
 
