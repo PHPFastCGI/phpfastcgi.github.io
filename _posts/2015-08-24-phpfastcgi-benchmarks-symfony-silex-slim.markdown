@@ -13,7 +13,7 @@ My purpose is not to advise you which is the best framework to use, or even to c
 
 ## Benchmarking System
 
-Ubuntu 64-bit Server 15.04 run inside VMWare Fusion, NGINX, 2GB RAM and 4 processor cores.
+Ubuntu 64-bit Server 15.04 inside VMWare Fusion, NGINX, 2GB RAM and 4 processor cores.
 
 For the control tests, the PHP FastCGI Process Manager (PHP-FPM) was used to interface the application being benchmarked with NGINX. For the PHPFastCGI tests, the appropriate framework adapter was used.
 
@@ -48,7 +48,7 @@ The first three tables show the benchmark results for simple 'Hello, World!' app
 | NGINX + PHP-FPM    | 1654.26             | 0.605                 |
 | NGINX + PHPFastCGI | 3740.75             | 0.267                 |
 
-For a more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured which selects a random page from the database and renders it using Twig. What is interesting to note here is that the application is only marginally slower than the 'Hello, World!' Symfony application when using PHPFastCGI. I am planning on doing more investigation as to why this is, but I suspect that the framework is caching quite a lot in memory, though to what extent, I am unsure.
+For a more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database and renders it using Twig. What is interesting to note is that the result using PHPFastCGI is only marginally slower than the 'Hello, World!' application result. I am planning on doing more investigation as to why this is, but I suspect that the framework is caching quite a lot in memory, though to what extent, I am unsure.
 
 | 500 Page Website   | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
