@@ -11,6 +11,20 @@ p {
   text-align: justify;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, ul {
   padding-bottom: 0.5em;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+}
+
+table th {
+    border-bottom: 1px solid black;
+}
+
+table th, table td {
+    padding: 0.5em 1em 0.5em 1em;
 }
