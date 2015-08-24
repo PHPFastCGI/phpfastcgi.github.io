@@ -13,7 +13,7 @@ My purpose is not to advise you which is the best framework to use, or even to c
 
 ## Benchmarking System
 
-Ubuntu 64-bit Server 15.04 inside VMWare Fusion, NGINX, 2GB RAM and 4 processor cores.
+Running inside VMWare Fusion: Ubuntu 64-bit Server 15.04, 2GB RAM and 4 cores (Intel Core i7, 3.4 GHz).
 
 For the control tests, the PHP FastCGI Process Manager (PHP-FPM) was used to interface the application being benchmarked with NGINX. For the PHPFastCGI tests, the appropriate framework adapter was used.
 
