@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class PHPFastCGI\FastCGIDaemon\Http\Request</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.html">
+						PHPFastCGI<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.html">
+						FastCGIDaemon<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Command.html">
+						Command					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Connection.html">
+						Connection					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.ConnectionHandler.html">
+						ConnectionHandler					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Exception.html">
+						Exception					</a>
+
+						</li>
+				<li class="active">
+					<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html">
+						Http					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-PHPFastCGI.FastCGIDaemon.Http.Request.html">Request</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html">RequestInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html" title="Summary of PHPFastCGI\FastCGIDaemon\Http"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Request</h1>
+
+
+	<div class="description">
+	<p>The default implementation of the RequestInterface</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>PHPFastCGI\FastCGIDaemon\Http\Request</span></b>			
+			 implements 
+				<a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html"><span>PHPFastCGI\FastCGIDaemon\Http\RequestInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-PHPFastCGI.html">PHPFastCGI</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.html">FastCGIDaemon</a>\<a href="namespace-PHPFastCGI.FastCGIDaemon.Http.html">Http</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#9-147" title="Go to source code">Http/Request.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#24-41" title="Go to source code">__construct</a>( <span>array <var>$params</var></span>, <span>resource <var>$stdin</var></span> )</code>
+
+		<div class="description short">
+			<p>Constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>The FastCGI server params as an associative array</dd>
+					<dt><var>$stdin</var></dt>
+					<dd>The FastCGI stdin data as a stream resource</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getParams" id="_getParams">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getParams">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#43-49" title="Go to source code">getParams</a>( )</code>
+
+		<div class="description short">
+			<p>Get the FastCGI request params</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the FastCGI request params</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Associative array of FastCGI request params
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getParams">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getParams()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getQuery" id="_getQuery">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getQuery">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#51-63" title="Go to source code">getQuery</a>( )</code>
+
+		<div class="description short">
+			<p>Returns expected contents of $_GET superglobal array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns expected contents of $_GET superglobal array</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getQuery">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getQuery()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPost" id="_getPost">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPost">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#65-85" title="Go to source code">getPost</a>( )</code>
+
+		<div class="description short">
+			<p>Returns expected contents of $_POST superglobal array</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns expected contents of $_POST superglobal array</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getPost">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getPost()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCookies" id="_getCookies">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCookies">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#87-104" title="Go to source code">getCookies</a>( )</code>
+
+		<div class="description short">
+			<p>Returns expected contents of $_COOKIES superglobal</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns expected contents of $_COOKIES superglobal</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getCookies">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getCookies()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getStdin" id="_getStdin">
+
+		<td class="attributes"><code>
+			 public 
+
+			resource
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getStdin">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#106-112" title="Go to source code">getStdin</a>( )</code>
+
+		<div class="description short">
+			<p>Get the FastCGI stdin data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the FastCGI stdin data</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					resource<br>Stream resource containing FastCGI stdin data
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getStdin">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getStdin()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getServerRequest" id="_getServerRequest">
+
+		<td class="attributes"><code>
+			 public 
+
+			ServerRequestInterface
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getServerRequest">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#114-134" title="Go to source code">getServerRequest</a>( )</code>
+
+		<div class="description short">
+			<p>Get the request as a PSR-7 server request</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the request as a PSR-7 server request</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					ServerRequestInterface<br>The request object
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getServerRequest">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getServerRequest()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHttpFoundationRequest" id="_getHttpFoundationRequest">
+
+		<td class="attributes"><code>
+			 public 
+
+			Symfony\Component\HttpFoundation\Request
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHttpFoundationRequest">#</a>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#136-146" title="Go to source code">getHttpFoundationRequest</a>( )</code>
+
+		<div class="description short">
+			<p>Get the request as a Symfony HttpFoundation request</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the request as a Symfony HttpFoundation request</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Symfony\Component\HttpFoundation\Request<br>The request object
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html#_getHttpFoundationRequest">PHPFastCGI\FastCGIDaemon\Http\RequestInterface::getHttpFoundationRequest()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="params" id="$params">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#14-17" title="Go to source code"><var>$params</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$params" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="stdin" id="$stdin">
+		<td class="attributes"><code>
+			protected  
+			resource
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-PHPFastCGI.FastCGIDaemon.Http.Request.html#19-22" title="Go to source code"><var>$stdin</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$stdin" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -197,14 +197,14 @@ implementation of the kernel interface.</p>
 		<td class="attributes"><code>
 			 public 
 
-			ResponseInterface
+			ResponseInterface|HttpFoundationResponse
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_handleRequest">#</a>
-		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.CallbackWrapper.html#34-40" title="Go to source code">handleRequest</a>( <span>Psr\Http\Message\ServerRequestInterface <var>$request</var></span> )</code>
+		<code><a href="source-class-PHPFastCGI.FastCGIDaemon.CallbackWrapper.html#34-40" title="Go to source code">handleRequest</a>( <span><code><a href="class-PHPFastCGI.FastCGIDaemon.Http.RequestInterface.html">PHPFastCGI\FastCGIDaemon\Http\RequestInterface</a></code> <var>$request</var></span> )</code>
 
 		<div class="description short">
 			<p>Handles a request and returns a response.</p>
@@ -217,12 +217,12 @@ implementation of the kernel interface.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$request</var></dt>
-					<dd>The PSR-7 HTTP server request message</dd>
+					<dd>FastCGI HTTP request object</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					ResponseInterface<br>The PSR-7 HTTP server response message
+					ResponseInterface|HttpFoundationResponse<br>HTTP response message
 				</div>
 
 
