@@ -30,8 +30,6 @@ The 'ab' benchmarking tool was used to conduct the tests. It was configured for 
 
 The first three tables show the benchmark results for simple 'Hello, World!' applications. The number of requests per second is a pretty useless figure here; what is more important is the **reduction in the time taken to handle each request**, as this indicates the amount of time shaved off the bootstrapping of the framework.
 
-In general, **if the application is doing more there are greater potential time savings to be had**. This is why the increase in performance of the micro-frameworks is less significant then that of the full stack Symfony framework. This is also why 'Hello, World!' benchmarks are actually the **least impressive** benchmarks for the PHPFastCGI project. Below is a [more realistic benchmark](#realistic-benchmark) that demonstrates a more drastic speed increase.
-
 | Symfony            | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
 | NGINX + PHP-FPM    | 551.59              | 1.813                 |
@@ -47,7 +45,9 @@ In general, **if the application is doing more there are greater potential time 
 | NGINX + PHP-FPM    | 2058.91             | 0.486                 |
 | NGINX + PHPFastCGI | 2734.21             | 0.366                 |
 
-<a name="realistic-benchmark"></a>For the more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database (MySQL) and renders it using Twig. The Doctrine entity repository is cleared after each request, so the framework is not caching the results of the queries. A much greater performance can be achieved by not doing this, but the purpose of this benchmark is to test when the application has actual work to do - so I have not cheated.
+In general, **if the application is doing more there are greater potential time savings to be had**. This is why the increase in performance of the micro-frameworks is less significant than that of the full stack Symfony framework. This is also why 'Hello, World!' benchmarks are actually the **least impressive** benchmarks for the PHPFastCGI project.
+
+For a more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database (MySQL) and renders it using Twig. The Doctrine entity repository is cleared after each request, so the framework is not caching the results of the queries. A much greater performance can be achieved by not doing this, but the purpose of this benchmark is to test when the application has actual work to do - so I have not cheated.
 
 | 500 Page Website   | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
