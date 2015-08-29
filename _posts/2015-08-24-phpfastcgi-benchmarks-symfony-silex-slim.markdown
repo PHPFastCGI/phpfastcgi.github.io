@@ -7,15 +7,15 @@ categories: general
 
 ## Introduction
 
-I have conducted a series of benchmark tests to illustrate the performance increases achievable when using PHPFastCGI. All of these tests have been conducted in good faith.
+I have conducted a series of benchmark tests to illustrate the performance increases achievable when using the PHPFastCGI project. All of these tests have been conducted in good faith.
 
-My purpose is not to advise you which is the best framework to use, or even to convince you that using PHPFastCGI in your application would be a good idea. For many PHP developers, the number of requests per second that their application can handle is not important. My purpose is only to prove that if you wish to develop high performance PHP applications, PHPFastCGI (and the technique it uses) can help.
+My purpose is not to advise you which is the best framework to use, or even to convince you that using PHPFastCGI in your application would be a good idea. **For many PHP developers, the number of requests per second that their application can handle is not important**. My purpose is only to prove that if you wish to develop high performance PHP applications, PHPFastCGI (and the technique it uses) can help.
 
 ## Benchmarking System
 
-Running inside VMWare Fusion: Ubuntu 64-bit Server 15.04, 2GB RAM and 4 cores (Intel Core i7, 3.4 GHz).
+Running inside VMWare Fusion: Ubuntu 64-bit Server 15.04, NGINX, PHP 5.6.4, 2GB RAM and 4 cores (Intel Core i7, 3.4 GHz).
 
-For the control tests, the PHP FastCGI Process Manager (PHP-FPM) was used to interface the application being benchmarked with NGINX. For the PHPFastCGI tests, the appropriate framework adapter was used.
+For each of the frameworks, the application was initially benchmarked using the PHP FastCGI Process Manager (PHP-FPM) with the opcache enabled. For the PHPFastCGI benchmarks, a command line application was created for each of the frameworks using the appropriate adapter. Six instances of each application were then launched and NGINX's inbuilt load balancer was used in round-robin mode.
 
 Whilst PHP-FPM and PHPFastCGI sound similar, there is a very important difference:
 
@@ -24,36 +24,35 @@ Whilst PHP-FPM and PHPFastCGI sound similar, there is a very important differenc
 
 Because of this difference, **applications using PHPFastCGI have to be developed very carefully**. Read this article on [things to consider when using PHPFastCGI with your application]({% post_url 2015-08-21-things-to-consider-using-phpfastcgi %}) if you wish to know more.
 
-Six worker daemons were set up for the PHPFastCGI tests.
-
-The 'ab' benchmarking tool was used to conduct the tests. It was configured for 5000 requests at a concurrency level of 20.
+The 'ab' benchmarking tool was used to conduct the tests. It was configured for 50000 requests at a concurrency level of 20.
 
 ## The Tests
 
-The first three tables show the benchmark results for simple 'Hello, World!' applications. The number of requests per second is a pretty useless figure here; what is more important is the reduction in the time taken to handle each request, as this indicates the amount of time shaved off the bootstrapping of the framework.
+The first three tables show the benchmark results for simple 'Hello, World!' applications. The number of requests per second is a pretty useless figure here; what is more important is the **reduction in the time taken to handle each request**, as this indicates the amount of time shaved off the bootstrapping of the framework.
 
+In general, **if the application is doing more there are greater potential time savings to be had**. This is why the increase in performance of the micro-frameworks is less significant that the full stack Symfony framework. This is also why 'Hello, World!' benchmarks are actually the **least impressive** benchmarks for the PHPFastCGI project. Below is a [more realistic benchmark](#realistic-benchmarks) that demonstrates a more drastic speed increase.
 
 | Symfony            | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
-| NGINX + PHP-FPM    | 584.88              | 1.71                  |
-| NGINX + PHPFastCGI | 1701.97             | 0.59                  |
+| NGINX + PHP-FPM    | 551.59              | 1.813                 |
+| NGINX + PHPFastCGI | 1739.16             | 0.575                 |
 
 | Silex              | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
-| NGINX + PHP-FPM    | 1252.08             | 0.799                 |
-| NGINX + PHPFastCGI | 2701.78             | 0.37                  |
+| NGINX + PHP-FPM    | 1424.30             | 0.702                 |
+| NGINX + PHPFastCGI | 2332.22             | 0.429                 |
 
 | Slim (v3)          | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
-| NGINX + PHP-FPM    | 1654.26             | 0.605                 |
-| NGINX + PHPFastCGI | 3740.75             | 0.267                 |
+| NGINX + PHP-FPM    | 2058.91             | 0.486                 |
+| NGINX + PHPFastCGI | 2734.21             | 0.366                 |
 
-For a more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database and renders it using Twig. What is interesting to note is that the result using PHPFastCGI is only marginally slower than the 'Hello, World!' application result. I am planning on doing more investigation as to why this is, but I suspect that the framework is caching quite a lot in memory, though to what extent, I am unsure.
+<a name="realistic-benchmark"></a>For the more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database (MySQL) and renders it using Twig. The Doctrine entity repository is cleared after each request, so the framework is not caching the results of the queries between requests. A much greater performance can be achieved by not doing this, but the purpose of this benchmark is to test when the application has actual work to do - so I have not cheated.
 
 | 500 Page Website   | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
-| NGINX + PHP-FPM    | 262.52              | 3.809                 |
-| NGINX + PHPFastCGI | 1695.75             | 0.59                  |
+| NGINX + PHP-FPM    | 282.55              | 3.539                 |
+| NGINX + PHPFastCGI | 1334.64             | 0.749                 |
 
 ## References
 
@@ -63,3 +62,5 @@ For a more realistic benchmark, I created a small 500 page website application u
 - [Speedfony Benchmarking App](https://github.com/PHPFastCGI/SpeedfonyBenchmarkingApp) (500 page website)
 
 You may also be interested in the core [FastCGIDaemon Package](https://github.com/PHPFastCGI/FastCGIDaemon) which can be used to set up your web application with a different framework.
+
+_This article was revised on 29th August 2015 to contain more accurate benchmarks. Changes include turning on the opcache and significant changes to the FastCGIDaemon core._
