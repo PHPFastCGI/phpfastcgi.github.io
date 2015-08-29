@@ -15,7 +15,7 @@ My purpose is not to advise you which is the best framework to use, or even to c
 
 Running inside VMWare Fusion: Ubuntu 64-bit Server 15.04, NGINX, PHP 5.6.4, 2GB RAM and 4 cores (Intel Core i7, 3.4 GHz).
 
-For each of the frameworks, the application was initially benchmarked using the PHP FastCGI Process Manager (PHP-FPM) with the opcache enabled. For the PHPFastCGI benchmarks, a command line application was created for each of the frameworks using the appropriate adapter. Six instances of each application were then launched and NGINX's inbuilt load balancer was used in round-robin mode.
+For each of the frameworks, the application was initially benchmarked using the PHP FastCGI Process Manager (PHP-FPM) with the OPcache enabled. For the PHPFastCGI benchmarks, a command line application was created for each of the frameworks using the appropriate adapter. Six instances of each application were then launched and NGINX's inbuilt load balancer was used in round-robin mode.
 
 Whilst PHP-FPM and PHPFastCGI sound similar, there is a very important difference:
 
@@ -30,7 +30,7 @@ The 'ab' benchmarking tool was used to conduct the tests. It was configured for 
 
 The first three tables show the benchmark results for simple 'Hello, World!' applications. The number of requests per second is a pretty useless figure here; what is more important is the **reduction in the time taken to handle each request**, as this indicates the amount of time shaved off the bootstrapping of the framework.
 
-In general, **if the application is doing more there are greater potential time savings to be had**. This is why the increase in performance of the micro-frameworks is less significant that the full stack Symfony framework. This is also why 'Hello, World!' benchmarks are actually the **least impressive** benchmarks for the PHPFastCGI project. Below is a [more realistic benchmark](#realistic-benchmarks) that demonstrates a more drastic speed increase.
+In general, **if the application is doing more there are greater potential time savings to be had**. This is why the increase in performance of the micro-frameworks is less significant then that of the full stack Symfony framework. This is also why 'Hello, World!' benchmarks are actually the **least impressive** benchmarks for the PHPFastCGI project. Below is a [more realistic benchmark](#realistic-benchmark) that demonstrates a more drastic speed increase.
 
 | Symfony            | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
@@ -47,12 +47,18 @@ In general, **if the application is doing more there are greater potential time 
 | NGINX + PHP-FPM    | 2058.91             | 0.486                 |
 | NGINX + PHPFastCGI | 2734.21             | 0.366                 |
 
-<a name="realistic-benchmark"></a>For the more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database (MySQL) and renders it using Twig. The Doctrine entity repository is cleared after each request, so the framework is not caching the results of the queries between requests. A much greater performance can be achieved by not doing this, but the purpose of this benchmark is to test when the application has actual work to do - so I have not cheated.
+<a name="realistic-benchmark"></a>For the more realistic benchmark, I created a small 500 page website application using the Symfony framework. This has a single route configured that selects a random page from the database (MySQL) and renders it using Twig. The Doctrine entity repository is cleared after each request, so the framework is not caching the results of the queries. A much greater performance can be achieved by not doing this, but the purpose of this benchmark is to test when the application has actual work to do - so I have not cheated.
 
 | 500 Page Website   | Requests Per Second | Time Per Request (ms) |
 |--------------------|---------------------|-----------------------|
 | NGINX + PHP-FPM    | 282.55              | 3.539                 |
 | NGINX + PHPFastCGI | 1334.64             | 0.749                 |
+
+## Author Note
+
+Whilst I hope you agree that the result of these benchmarks is impressive, there is more work to be done! This project is still not stable, and I welcome any contributions to the project that you may have.
+
+Also, if you are attending ConFoo and would like to hear more about this project then [please vote for my talk proposal](http://confoo.ca/en/call-for-papers/speaker/andrew-carter).
 
 ## References
 
