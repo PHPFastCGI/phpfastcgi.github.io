@@ -25,11 +25,13 @@ Below is an example of a simple 'Hello, World!' FastCGI application in PHP using
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
 use PHPFastCGI\FastCGIDaemon\ApplicationFactory;
-use Psr\Http\Message\ServerRequestInterface;
+use PHPFastCGI\FastCGIDaemon\Http\RequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
 // A simple kernel. This is the core of your application
-$kernel = function (ServerRequestInterface $request) {
+$kernel = function (RequestInterface $request) {
+    // $request->getServerRequest()         returns PSR-7 server request object
+    // $request->getHttpFoundationRequest() returns HTTP foundation request object
     return new HtmlResponse('<h1>Hello, World!</h1>');
 };
 
