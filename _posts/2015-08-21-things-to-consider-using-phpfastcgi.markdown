@@ -51,6 +51,12 @@ For example, Doctrine's SQL logger (enabled by default in the Symfony developmen
 
 One potential approach for handling memory leaks is to restart application instances after they have been operating for a certain amount of time or handled a certain number of requests. This feature is scheduled for integration into the FastCGIDaemon core package and will be available before the first stable release. However, it is still considered best practice to try and develop applications without memory leaks.
 
+## Connection Timeouts
+
+One of the advantages of using PHPFastCGI to keep your application alive is not having to reconnect to databases, cache layers and message queues for every HTTP request. However, should any of these connections timeout or otherwise disconnect, your application must contain logic to restablish these. Failure to do so will leave you 5XX error codes and possibly useless instances of your application running.
+
+This is a particularly nasty bug, as you may not notice it until you have deployed to your production server and gone though a quiet match in the early hours of the morning.
+
 ## Conclusion
 
 There is lots to be gained and lots to be lost by daemonizing your PHP applications. It is very important that you are aware of the potential issues you could face and how to mitigate these. However, with a properly designed and carefully considered application - you can reach response speeds well beyond the dreaming limits of conventional PHP applications. 
