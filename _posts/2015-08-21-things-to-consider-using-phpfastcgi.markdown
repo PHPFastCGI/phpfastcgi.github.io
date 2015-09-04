@@ -53,9 +53,9 @@ One potential approach for handling memory leaks is to restart application insta
 
 ## Connection Timeouts
 
-One of the advantages of using PHPFastCGI to keep your application alive is not having to reconnect to databases, cache layers and message queues for every HTTP request. However, should any of these connections timeout or otherwise disconnect, your application must contain logic to restablish these. Failure to do so will leave you 5XX error codes and possibly useless instances of your application running.
+One of the advantages of using PHPFastCGI to keep your application alive is not having to reconnect to databases, cache layers and message queues for every HTTP request. However, should any of these connections timeout or otherwise disconnect, your application must contain logic to restablish these. Failure to do so will leave you with 5XX error codes and possibly useless instances of your application running.
 
-This is a particularly nasty bug, as you may not notice it until you have deployed to your production server and gone though a quiet match in the early hours of the morning.
+This is a particularly nasty bug, as you may not notice it until you have deployed to your production server and gone though a quiet patch in the early hours of the morning.
 
 ## Conclusion
 
