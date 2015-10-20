@@ -12,7 +12,7 @@ Before doing this, please read the post on [things to consider when using PHPFas
 To do this, open the terminal in your project directory and run the following command:
 
 {% highlight bash %}
-php composer.phar require "phpfastcgi/speedfony-bundle:~0.5"
+php composer.phar require "phpfastcgi/speedfony-bundle:~0.7"
 {% endhighlight %}
 
 This command adds the Speedfony Bundle to your composer dependencies.
