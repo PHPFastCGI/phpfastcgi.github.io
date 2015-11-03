@@ -7,4 +7,4 @@ categories: general
 
 Welcome to the website for the PHPFastCGI project. I'm going to use this space to post updates on the project, document features and show examples - all with the aim of making the software easier to use.
 
-I'm hoping to have a first stable release of this software ready by September 2015, so please watch this space if you find this project interesting.
+Please watch this space if you find this project interesting.
