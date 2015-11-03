@@ -8,7 +8,7 @@ permalink: /quick-start/
 
 Using PHPFastCGI, applications can stay alive between HTTP requests whilst operating behind the protection of a FastCGI enabled web server.
 
-PHPFastCGI is a collection of several packages including a [core FastCGIDaemon package](http://github.com/PHPFastCGI/FastCGIDaemon) and easy integration adapters built for the [Symfony](http://github.com/PHPFastCGI/SpeedfonyBundle), [Silex](http://github.com/PHPFastCGI/Speedex) and [Slim](http://github.com/PHPFastCGI/Slimmer) frameworks.
+PHPFastCGI is a collection of several packages including a [core FastCGIDaemon package](http://github.com/PHPFastCGI/FastCGIDaemon) and easy integration adapters built for the [Symfony](http://github.com/PHPFastCGI/SpeedfonyBundle), [Silex](http://github.com/PHPFastCGI/SilexAdapter) and [Slim](http://github.com/PHPFastCGI/SlimAdapter) frameworks.
 
 ## Warning
 
