@@ -70,8 +70,8 @@ Also, if you are attending ConFoo and would like to hear more about this project
 ## References
 
 - [Speedfony Bundle](https://github.com/PHPFastCGI/SpeedfonyBundle) for Symfony
-- [Speedex Package](https://github.com/PHPFastCGI/Speedex) for Silex
-- [Slimmer Package](https://github.com/PHPFastCGI/Slimmer) for Slim v3
+- [Silex Adapter](https://github.com/PHPFastCGI/SilexAdapter)
+- [Slim Adapter](https://github.com/PHPFastCGI/SlimAdapter)
 - [Speedfony Benchmarking App](https://github.com/PHPFastCGI/SpeedfonyBenchmarkingApp) (500 page website)
 
 You may also be interested in the core [FastCGIDaemon Package](https://github.com/PHPFastCGI/FastCGIDaemon), which can be used to create FastCGI applications without a framework (or with a different one).
