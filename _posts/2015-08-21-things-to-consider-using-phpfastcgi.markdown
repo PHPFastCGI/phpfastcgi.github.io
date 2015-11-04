@@ -11,7 +11,7 @@ Let me start with something very important.
 
 **Not every application is a suitable candidate to become a FastCGI application.**
 
-In conventional PHP applications, HTTP requests are nicely separated from each other. Web servers handle each HTTP request as a different execution of an application. This provides a degree of **safety** and **security**. If you choose to run your PHP application as a FastCGI application, you forefit this separation for an increase in performance.
+In conventional PHP applications, HTTP requests are nicely separated from each other. Web servers handle each HTTP request as a different execution of an application. This provides a degree of **safety** and **security**. If you choose to run your PHP application as a FastCGI application, you forefit this for an increase in performance.
 
 ## Fatal Errors and Exceptions
 
