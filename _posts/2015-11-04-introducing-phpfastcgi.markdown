@@ -9,7 +9,7 @@ categories: general
 
 Let me start by clearing up a possible source of confusion for those of you familiar with FastCGI. This project is not about PHP-FPM. PHP-FPM is a great way of improving the performance of PHP applications, but the way it works is different to PHPFastCGI.
 
-PHP-FPM keeps the **PHP interpretter** alive between HTTP request cycles.
+PHP-FPM keeps the **PHP interpreter** alive between HTTP request cycles.
 
 PHPFastCGI keeps the **PHP application** alive between HTTP request cycles.
 
@@ -19,7 +19,7 @@ That's all of your services, configuration... everything.
 
 For a simple 500 page Symfony application, PHPFastCGI can take the performance from 280 rq/s to 1770 rq/s. If you're interested, check the [post on how the benchmarks were conducted]({$ post_url 2015-08-24-phpfastcgi-benchmarks-symfony-silex-slim %}). To summarize, I tried to make the Symfony application as fast as I could (OPCache enabled, PHP-FPM, NGINX). Then, I ran it as a PHPFastCGI application and compared the performance.
 
-Please do not take those benchmarks too seriously (though I believe that they are significant). The top results were collected using a PHP extension which is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
+Please do not take those benchmarks too seriously (though I believe that they are significant). The top results were collected using a PHP extension that is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
 
 Regardless, the point still remains - any application that has to reload itself on **every HTTP request cycle** will be significantly slower than a version of the same application that does not.
 
@@ -66,6 +66,6 @@ $application->run();
 - [Slim v3 Adapter](http://github.com/PHPFastCGI/SlimAdapter)
 - [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter)
 
-If you have any suggestions or queries, feel free to use the comment section below, [GitHub](http://github.com/PHPFastCGI/FastCGIDaemon) or [Twitter](http://twitter.com/AndrewCarterUK).
+If you have any suggestions or queries, please use the comment section below, [GitHub](http://github.com/PHPFastCGI/FastCGIDaemon) or [Twitter](http://twitter.com/AndrewCarterUK).
 
-Also - as a cheeky request - if you like this project it would make me very happy if you shared it with your developer friends.
+Also - as a cheeky request - if you like the sound of this project it would make me very happy if you shared it with your developer friends.
