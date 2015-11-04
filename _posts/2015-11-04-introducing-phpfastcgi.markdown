@@ -62,11 +62,10 @@ $application->run();
 ### References
 
 - [FastCGIDaemon](http://github.com/PHPFastCGI/FastCGIDaemon)
-<iframe src="https://ghbtns.com/github-btn.html?user=PHPFastCGI&repo=FastCGIDaemon&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 - [Speedfony Bundle](http://github.com/PHPFastCGI/SpeedfonyBundle)
 - [Slim v3 Adapter](http://github.com/PHPFastCGI/SlimAdapter)
 - [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter)
 
 If you have any suggestions or queries, please use the comment section below, [GitHub](http://github.com/PHPFastCGI/FastCGIDaemon) or [Twitter](http://twitter.com/AndrewCarterUK).
 
-Also - as a cheeky request - if you like the sound of this project it would make me very happy if you shared it with your developer friends.
+Also - as a cheeky request - if you like the sound of this project it would make me very happy if you shared it with your developer friends or gave it a star on GitHub.
