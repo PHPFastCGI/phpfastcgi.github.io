@@ -21,13 +21,13 @@ For a simple 500 page Symfony application, PHPFastCGI can take the performance f
 
 Please do not take those benchmarks too seriously (though I believe that they are significant). The top results were collected using a PHP extension that is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
 
-Regardless, the point still remains - any application that has to reload itself on **every HTTP request cycle** will be significantly slower than a version of the same application that does not.
+Regardless, any application that has to reload itself on **every HTTP request cycle** will be significantly slower than a version of the same application that does not.
 
 ### The "How"
 
 Before doing this with an application, please read the post on [things to consider when using PHPFastCGI with your application]({% post_url 2015-08-21-things-to-consider-using-phpfastcgi %}).
 
-If your still think that your application is ready to be run in this manner, it is **really easy** to create a FastCGI application using PHPFastCGI. With a Symfony application, you can do it by just [installing a bundle]({% post_url 2015-07-14-making-symfony-faster %}).
+If your still think that your application is ready to be run in this way, it is **really easy** to create a FastCGI application using PHPFastCGI. With a Symfony application, you can do it by just [installing a bundle]({% post_url 2015-07-14-making-symfony-faster %}).
 
 The project also includes a [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter) and a [Slim Adapter](http://github.com/PHPFastCGI/SlimAdapter). These provide wrappers for the core application classes of each framework.
 
