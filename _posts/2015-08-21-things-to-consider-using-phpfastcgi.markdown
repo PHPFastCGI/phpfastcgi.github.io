@@ -37,7 +37,7 @@ If you are using apache's [mod_fastcgi][mod_fastcgi] to process manage your appl
 
 ## Memory Segregation
 
-Static memory and global variables are well documented enemies. If you intend to create a FastCGI application, you should avoid these like the plague.
+Static memory and global variables are well documented enemies. If you intend to create a FastCGI application, you should avoid these like the plague (that includes $_SESSION, $_POST, $_GET, etc...).
 
 Any scenario where a HTTP request could influence, interfere or read memory that is shared by a later (or earlier) HTTP request is an opportunity for an attacker.
 
