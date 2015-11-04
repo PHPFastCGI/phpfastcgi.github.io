@@ -17,7 +17,7 @@ That's all of your services, configuration... everything.
 
 ### The "Why"
 
-For a simple 500 page Symfony application, PHPFastCGI can take the performance from 280 rq/s to 1770 rq/s. If you're interested, check the [post on how the benchmarks were conducted]({ post_url 2015-08-24-phpfastcgi-benchmarks-symfony-silex-slim %}). To summarize, I tried to make the Symfony application as fast as I could (OPCache enabled, PHP-FPM, NGINX). Then, I ran it as a PHPFastCGI application and compared the performance.
+For a simple 500 page Symfony application, PHPFastCGI can take the performance from 280 rq/s to 1770 rq/s. If you're interested, check the [post on how the benchmarks were conducted]({% post_url 2015-08-24-phpfastcgi-benchmarks-symfony-silex-slim %}). To summarize, I tried to make the Symfony application as fast as I could (OPCache enabled, PHP-FPM, NGINX). Then, I ran it as a PHPFastCGI application and compared the performance.
 
 Please do not take those benchmarks too seriously (though I believe that they are significant). The top results were collected using a PHP extension that is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
 
@@ -62,6 +62,7 @@ $application->run();
 ### References
 
 - [FastCGIDaemon](http://github.com/PHPFastCGI/FastCGIDaemon)
+<iframe src="https://ghbtns.com/github-btn.html?user=PHPFastCGI&repo=FastCGIDaemon&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 - [Speedfony Bundle](http://github.com/PHPFastCGI/SpeedfonyBundle)
 - [Slim v3 Adapter](http://github.com/PHPFastCGI/SlimAdapter)
 - [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter)
