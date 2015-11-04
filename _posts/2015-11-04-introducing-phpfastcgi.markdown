@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "280 rq/s to 1770 rq/s - Speed up Symfony, Silex and Slim apps with PHPFastCGI"
+title:  "280 rq/s to 1770 rq/s - Speed up Symfony, Silex and Slim with PHPFastCGI"
 date:   2015-11-04 01:00:00
 categories: general
 ---
