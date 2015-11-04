@@ -19,7 +19,7 @@ That's all of your services, configuration... everything.
 
 For a simple 500 page Symfony application, PHPFastCGI can take the performance from 280 rq/s to 1770 rq/s. If you're interested, check the [post on how the benchmarks were conducted]({$ post_url 2015-08-24-phpfastcgi-benchmarks-symfony-silex-slim %}). To summarize, I tried to make the Symfony application as fast as I could (OPCache enabled, PHP-FPM, NGINX). Then, I ran it as a PHPFastCGI application and compared the performance.
 
-Please do not take those benchmarks too seriously. The top results were collected using a PHP extension which is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
+Please do not take those benchmarks too seriously (though I believe that they are significant). The top results were collected using a PHP extension which is currently lacking a few features (and not as stable as the default PHP implementation of the protocol). Also, a very helpful commenter has pointed out some ways that I could improve the benchmarks. As a result, I will be re-running them shortly.
 
 Regardless, the point still remains - any application that has to reload itself on **every HTTP request cycle** will be significantly slower than a version of the same application that does not.
 
@@ -27,7 +27,7 @@ Regardless, the point still remains - any application that has to reload itself 
 
 Before doing this with an application, please read the post on [things to consider when using PHPFastCGI with your application]({% post_url 2015-08-21-things-to-consider-using-phpfastcgi %}).
 
-If your still think that application is ready to be run in this manner, it is **really easy** to set up PHPFastCGI. With a Symfony application, you can do it by just [installing a bundle]({% post_url 2015-07-14-making-symfony-faster %}).
+If your still think that your application is ready to be run in this manner, it is **really easy** to create a FastCGI application using PHPFastCGI. With a Symfony application, you can do it by just [installing a bundle]({% post_url 2015-07-14-making-symfony-faster %}).
 
 The project also includes a [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter) and a [Slim Adapter](http://github.com/PHPFastCGI/SlimAdapter). These provide wrappers for the core application classes of each framework.
 
@@ -59,7 +59,12 @@ $application = (new ApplicationFactory)->createApplication($kernel);
 $application->run();
 {% endhighlight %}
 
-### Author Note
+### References
+
+- [FastCGIDaemon](http://github.com/PHPFastCGI/FastCGIDaemon)
+- [Speedfony Bundle](http://github.com/PHPFastCGI/SpeedfonyBundle)
+- [Slim v3 Adapter](http://github.com/PHPFastCGI/SlimAdapter)
+- [Silex Adapter](http://github.com/PHPFastCGI/SilexAdapter)
 
 If you have any suggestions or queries, feel free to use the comment section below, [GitHub](http://github.com/PHPFastCGI/FastCGIDaemon) or [Twitter](http://twitter.com/AndrewCarterUK).
 
