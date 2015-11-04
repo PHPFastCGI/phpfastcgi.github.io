@@ -9,15 +9,15 @@ categories: general
 
 Let me start by clearing up a possible source of confusion for those of you familiar with FastCGI. This project is not about PHP-FPM. PHP-FPM is a great way of improving the performance of PHP applications, but the way it works is different to PHPFastCGI.
 
-PHP-FPM keeps the **PHP interpretter** alive between request cycles.
+PHP-FPM keeps the **PHP interpretter** alive between HTTP request cycles.
 
-PHPFastCGI keeps the **PHP application** alive between request cycles.
+PHPFastCGI keeps the **PHP application** alive between HTTP request cycles.
 
 That's all of your services, configuration... everything.
 
-Now, there are lots of reasons that you might not want to do this:
-
 ### The "Why"
+
+Now, there are lots of reasons that you **might not** want to do this:
 
 _"In conventional PHP applications, HTTP requests are nicely separated from each other. Web servers handle each HTTP request as a different execution of an application. **This provides a degree of safety and security**. If you choose to run your PHP application as a FastCGI application, **you forefit this for an increase in performance**."_
 <br />\- [Things to consider when using PHPFastCGI with your application]({% post_url 2015-08-21-things-to-consider-using-phpfastcgi %})
