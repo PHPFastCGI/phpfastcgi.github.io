@@ -15,7 +15,7 @@ To do this, open the terminal in your project directory and run the following co
 php composer.phar require "phpfastcgi/speedfony-bundle:~0.7"
 {% endhighlight %}
 
-This command adds the Speedfony Bundle to your composer dependencies.
+This command adds the [Speedfony Bundle](http://github.com/PHPFastCGI/SpeedfonyBundle) to your composer dependencies.
 
 Now you need to register the bundle in your AppKernel.php file:
 {% highlight php startinline=true %}
